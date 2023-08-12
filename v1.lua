@@ -224,6 +224,7 @@ Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
 
 
+
  --Variables
 
 local request = (syn and syn.request) or (http and http.request) or http_request
@@ -2528,7 +2529,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 	wait(0.1)
 	TweenService:Create(Topbar.Divider, TweenInfo.new(3.5, Enum.EasingStyle.Quint), {Size = UDim2.new(1, 0, 0, 1), BackgroundColor3 = SelectedTheme.Divider}):Play()
 	wait(0.1)
-	task.delay(2, function()
+	task.delay(.3, function()
 	TweenService:Create(TabListBack.Divider, TweenInfo.new(5, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 1, 1, 0), BackgroundColor3 = SelectedTheme.Divider}):Play()
 	end)
 	TweenService:Create(Topbar.Title, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
