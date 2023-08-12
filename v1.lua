@@ -1312,7 +1312,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		TabButton.Title.Text = Name
 		TabButton.Parent = TabList
 		TabButton.Title.TextWrapped = false
-		TabButton.Size = UDim2.new(0, TabButton.Title.TextBounds.X + 30, 0, 30)
+		TabButton.Size = UDim2.new(0, 201, 0, 30)
 
 		if Image then
 			TabButton.Title.AnchorPoint = Vector2.new(0, 0.5)
@@ -1320,7 +1320,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			TabButton.Image.Image = "rbxassetid://"..Image
 			TabButton.Image.Visible = true
 			TabButton.Title.TextXAlignment = Enum.TextXAlignment.Left
-			TabButton.Size = UDim2.new(0, TabButton.Title.TextBounds.X + 46, 0, 30)
+			TabButton.Size = UDim2.new(0, 201, 0, 30)
 		end
 
 		TabButton.BackgroundTransparency = 1
