@@ -211,6 +211,7 @@ end
 local Camera = workspace.CurrentCamera
 local Main = Rayfield.Main
 local Topbar = Main.Topbar
+local TabListBack = Main.TabListBack
 local Elements = Main.Elements
 local LoadingFrame = Main.LoadingFrame
 local TabList = Main.TabList
@@ -2513,6 +2514,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	Topbar.BackgroundTransparency = 1
 	Topbar.Divider.Size = UDim2.new(0, 0, 0, 1)
+	TabListBack.Divider.Size = UDim2.new(0, 1, 0, 0)
 	Topbar.CornerRepair.BackgroundTransparency = 1
 	Topbar.Title.TextTransparency = 1
 	Topbar.Theme.ImageTransparency = 1
@@ -2526,6 +2528,9 @@ function RayfieldLibrary:CreateWindow(Settings)
 	wait(0.1)
 	TweenService:Create(Topbar.Divider, TweenInfo.new(3.5, Enum.EasingStyle.Quint), {Size = UDim2.new(1, 0, 0, 1), BackgroundColor3 = SelectedTheme.Divider}):Play()
 	wait(0.1)
+	task.delay(2, function()
+	TweenService:Create(TabListBack.Divider, TweenInfo.new(5, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 1, 1, 0), BackgroundColor3 = SelectedTheme.Divider}):Play()
+	end)
 	TweenService:Create(Topbar.Title, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 	wait(0.1)
 	TweenService:Create(Topbar.Theme, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {ImageTransparency = 0.8}):Play()
