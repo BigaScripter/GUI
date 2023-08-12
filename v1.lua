@@ -213,6 +213,7 @@ local Main = Rayfield.Main
 local Topbar = Main.Topbar
 local TabListBack = Main.TabListBack
 TabListBack.BackgroundTransparency = 1
+TabListBack.Title.TextTransparency = 1
 local Elements = Main.Elements
 local LoadingFrame = Main.LoadingFrame
 local TabList = Main.TabList
@@ -2532,6 +2533,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 	wait(0.1)
 	task.delay(.3, function()
 	TweenService:Create(TabListBack.Divider, TweenInfo.new(5, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 1, 1, 0), BackgroundColor3 = SelectedTheme.Divider}):Play()
+	TweenService:Create(TabListBack.Title, TweenInfo.new(0.45, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 	end)
 	TweenService:Create(Topbar.Title, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 	wait(0.1)
