@@ -214,6 +214,7 @@ local Topbar = Main.Topbar
 local TabListBack = Main.TabListBack
 TabListBack.BackgroundTransparency = 1
 TabListBack.Title.TextTransparency = 1
+TabListBack.BackgroundTransparency = 1
 TabListBack.Divider.Size = UDim2.new(0, 1, 0, 0)
 local Elements = Main.Elements
 local LoadingFrame = Main.LoadingFrame
