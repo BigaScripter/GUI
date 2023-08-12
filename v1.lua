@@ -212,6 +212,7 @@ local Camera = workspace.CurrentCamera
 local Main = Rayfield.Main
 local Topbar = Main.Topbar
 local TabListBack = Main.TabListBack
+TabListBack.BackgroundTransparency = 1
 local Elements = Main.Elements
 local LoadingFrame = Main.LoadingFrame
 local TabList = Main.TabList
